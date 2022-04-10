@@ -62,3 +62,11 @@ This conversation models an error in saving the email address per part of the bo
      `$ python -m unittest test.py`
      
      The output should indicate that the test ran correctly.
+ ## Suggested improvements
+ Some minor suggestions can be made to make the interaction with the bot easier:
+ 1. The else clause in the private `newsletter_flow` function of the `bot.py` file accesed through the conditional `self.conversation_status == "start"` should contain an additional line of 
+ 
+  `self.conversation_status = "expectingEmail"`
+  
+  2. Add possibility of rejecting after accepting as in the example conversation 4 with the `ask_for_email` intention instead of the `newsletter` intention
+
